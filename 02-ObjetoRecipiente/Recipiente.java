@@ -1,5 +1,3 @@
-
-
 public class Recipiente{
     /*colocar em privador,conceito de encapsulamento
     qtde=quantidade,cap=capacidade*/
@@ -22,11 +20,11 @@ public class Recipiente{
     }
 
     //Setar o valor usando SET
-    public void setCap ( int cap){
+    public void setCap (int cap){
         this.cap=cap;
     }
 
-    public void setQtde ( int qtde){
+    public void setQtde (int qtde){
         this.qtde=qtde;
     }
 }
