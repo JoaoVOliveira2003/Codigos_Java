@@ -85,5 +85,9 @@ public class CliRecipiente2 {
         reci4.encher();
         System.out.println("Depois de encher reci4:");
         System.out.println("reci4 capacidade - " + reci4.getCap() + ", reci4 quantidade - " + reci4.getQtde());
+        
+
+        //Se mandar simplesmente assim,ira sair aonde o arquivo esta gravado na memoria
+        //System.out.println(rec3);
     }
 }

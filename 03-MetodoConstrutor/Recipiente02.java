@@ -78,4 +78,10 @@ public class Recipiente02 {
             return false;
         }
     }
+
+    public String toString(){
+        return ("Capacidade " +  this.cap +  " Qtde: " +  this.qtde);
+    }
+
+
 }
