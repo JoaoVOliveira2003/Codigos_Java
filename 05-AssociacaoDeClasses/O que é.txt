@@ -1,0 +1,19 @@
+Associação de classe é basicamente vc
+usar atributos de uma classe como objetos do tipo em outra classe.
+
+(Vc cria uma classe pneu e utiliza esse em uma outra classe Carro)
+
+Quando vc associa classes,vc basicamente um espelho do que vc vai fazer no banco de dados
+\
+
+Associação entre classes - Uml
+*     - nenhum,um ou mais
+0..1  - nenhuma ou uma
+
+então pode se ser 
+
+recipiente contem nenhum,um ou mais   CONTENDO  nenhuma ou uma Substancia
+
+--------------------------------------------------------------------------
+
+Vai precisar 3 arquivos Client.java,recipiente.java e Substancia.java

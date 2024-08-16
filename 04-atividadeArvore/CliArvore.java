@@ -3,7 +3,7 @@ public class CliArvore {
         Arvore arvore01 = new Arvore("Cerejeira", 1.4f, true);
         Arvore arvore02 = new Arvore("Ipe", 2.0f, false);
         Arvore arvore03 = new Arvore("Cedro", 4.0f, true);
-
+        
         System.out.println(arvore01);
         System.out.println(arvore02);
         System.out.println(arvore03);
