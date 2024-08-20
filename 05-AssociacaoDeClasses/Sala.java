@@ -87,7 +87,7 @@ public class Sala{
     public String toString(){
         String temp="";
 
-        for(int i=0; i>alunos.size();i++){
+        for(int i=0; i<alunos.size();i++){
             temp+=(this.alunos.get(i) + "\n");
         }
 
