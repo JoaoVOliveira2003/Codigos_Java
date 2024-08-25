@@ -1,0 +1,85 @@
+Aluno.java
+    
+    -Cria atributos
+    
+    -metodo construtores
+    
+    public Aluno(String nome) {
+       this.nome = nome;
+    }
+
+    - Get e sets
+
+    public String getNome() {
+       return this.nome;
+    }
+ 
+    public void setNome(String nome) {
+       this.nome = nome;
+    }
+
+    - toString normal
+
+Sala.java
+
+    -coloca o import java.util.LinkedList;
+
+    -Cria atributos
+
+    private LinkedList<Aluno>      listaAlunos;
+    private LinkedList<ListaDoQue> nome do atruto; 
+
+    -Metodo construtores,tendo que colocar em todos
+    public Sala(){
+      listaAlunos = new LinkedList<>();
+    }
+
+    - Get e sets
+
+    -fazer o add
+    public void addAluno(Aluno aluno) {
+      listaAlunos.add(aluno);
+    }
+
+    -fazer um toString
+       @Override
+   public String toString() {
+      // Esse StringBuilder é basicamente uma variável de concatenação
+      StringBuilder todosAlunos = new StringBuilder();
+
+      // For para pegar os valores e colocar em todosAlunos
+      for (int i = 0; i < listaAlunos.size(); i++) {
+         todosAlunos.append(listaAlunos.get(i).toString()).append("\n");
+      }
+
+      return "Nome: " + this.nome + "\n" +
+             "Descrição: " + this.desc + "\n" +
+             "Quantidade: " + this.qtde + "\n" +
+             "Alunos: " + todosAlunos;
+   }
+
+CliSala.java
+
+    -Colocando tudo de java.util de uma vez
+
+    -public class CliSala 
+        public static void main(String[] args) 
+
+    -colocar os atributos incluindo um Scanner
+      String strTemp;
+      int intTemp = 0;
+      LinkedList<Aluno> lAlunos = new LinkedList<>();
+      Scanner sc = new Scanner(System.in);
+
+    -Criar uma sala sala1
+
+    -Inserir dados da sala
+
+    -Criar um Do While para pegar os valores dos alunos
+        lAlunos.add(new Aluno(strTemp, intTemp, sala1));
+
+    -colcoar alunos na sala
+
+    -System.out.println
+
+-Fim
