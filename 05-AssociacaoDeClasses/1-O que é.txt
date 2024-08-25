@@ -1,7 +1,7 @@
 Associação de classe é basicamente vc
-usar atributos de uma classe como objetos do tipo em outra classe.
+Utilizar uma classe como tipo de atributo em outra classe
 
-(Vc cria uma classe pneu e utiliza esse em uma outra classe Carro)
+(Vc cria uma classe pneu e utiliza esse em uma outra atributo Carro)
 
 Quando vc associa classes,vc basicamente um espelho do que vc vai fazer no banco de dados
 \
