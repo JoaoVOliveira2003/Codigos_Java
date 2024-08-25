@@ -6,10 +6,8 @@ public class cliSala {
         int intTemp;
         Scanner sc = new Scanner(System.in);
 
-        // Criando a lista de alunos
         LinkedList<Aluno> lAlunos = new LinkedList<>();
 
-        // Criando uma instância da sala
         Sala sala1 = new Sala();
 
         System.out.println("Insira o nome da sala: ");
@@ -24,33 +22,29 @@ public class cliSala {
         intTemp = sc.nextInt();
         sala1.setQtde(intTemp);
 
-        sc.nextLine(); // Consumindo a quebra de linha após nextInt()
-
+        sc.nextLine(); 
         do {
             System.out.println("Insira o nome do aluno: ");
             strTemp = sc.nextLine();
             System.out.println("Insira o RG do aluno: ");
             intTemp = sc.nextInt();
 
-            sc.nextLine(); // Consumindo a quebra de linha após nextInt()
+            sc.nextLine(); 
 
-            // Adicionando aluno à lista
             lAlunos.add(new Aluno(strTemp, intTemp, sala1));
 
             System.out.println("Insira c/C para continuar ou s/S para sair: ");
             strTemp = sc.next();
-            sc.nextLine(); // Consumindo a quebra de linha após next()
+            sc.nextLine(); 
 
         } while (strTemp.charAt(0) != 's' && strTemp.charAt(0) != 'S');
 
-        // Atualize aqui para setListAlunos
-        sala1.setListAlunos(lAlunos);
+        sala1.setAlunos(lAlunos);
 
-        System.out.println("Listando alunos");
+        System.out.println("Listando Sala");
         
-        // Chamamento do toString
         System.out.println(sala1);
 
-        sc.close(); // Fechando o Scanner para evitar vazamento de recursos
+        sc.close(); 
     }
 }
