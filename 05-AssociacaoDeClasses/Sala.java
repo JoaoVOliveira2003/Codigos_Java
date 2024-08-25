@@ -5,43 +5,45 @@ public class Sala {
     private String desc;
     private int qtde;
     
-    // O atributo listAlunos é do tipo LinkedList que armazena objetos da classe Aluno
-    private LinkedList<Aluno> listAlunos;
+    /*
+    O atributo aluno é tipo.do.objeto de uma outra classe 
+    */ 
+    private LinkedList<Aluno> alunos;
 
     // Construtores com sobrecarga
     public Sala() {
-        listAlunos = new LinkedList<>();
+        alunos = new LinkedList<>();
     }
 
     public Sala(String nome) {
-        listAlunos = new LinkedList<>();
+        alunos = new LinkedList<>();
         this.nome = nome;
     }
 
     public Sala(String nome, String desc) {
-        listAlunos = new LinkedList<>();
+        alunos = new LinkedList<>();
         this.nome = nome;
         this.desc = desc;
     }
 
     public Sala(String nome, String desc, int qtde) {
-        listAlunos = new LinkedList<>();
+        alunos = new LinkedList<>();
         this.nome = nome;
         this.desc = desc;
         this.qtde = qtde;
     }
 
     // Getters e Setters
-    public LinkedList<Aluno> getListAlunos() {
-        return this.listAlunos;
+    public LinkedList<Aluno> getAlunos() {
+        return this.alunos;
     }
 
-    public void setListAlunos(LinkedList<Aluno> listAlunos) {
-        this.listAlunos = listAlunos;
+    public void setAlunos(LinkedList<Aluno> alunos) {
+        this.alunos = alunos;
     }
 
-    public void addAluno(Aluno aluno) {
-        listAlunos.add(aluno);
+    public void addAlunos(Aluno aluno) {
+        alunos.add(aluno);
     }
 
     public String getNome() {
@@ -68,16 +70,19 @@ public class Sala {
         this.qtde = qtde;
     }
 
-    // Método toString para exibir informações da sala e dos alunos
     @Override
+
     public String toString() {
         StringBuilder temp = new StringBuilder();
-        for (Aluno aluno : listAlunos) {
-            temp.append(aluno).append("\n");
+    
+        // Primeiro for loop corrigido
+        for (int i = 0; i < alunos.size(); i++) {
+            temp.append(alunos.get(i).toString()).append("\n");
         }
-        return "Nome da sala: " + this.nome + 
-               " Descrição: " + this.desc + 
-               " Quantidade de alunos: " + this.qtde + 
+            
+        return "Nome: " + this.nome + 
+               "\nDescrição: " + this.desc + 
+               "\nQuantidade: " + this.qtde + 
                "\nAlunos:\n" + temp;
     }
 }
