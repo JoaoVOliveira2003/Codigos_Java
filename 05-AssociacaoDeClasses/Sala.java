@@ -73,6 +73,10 @@ public class Sala {
     public String toString() {
         StringBuilder temp = new StringBuilder();
     
+<<<<<<< HEAD
+=======
+        // Primeiro for loop corrigido
+>>>>>>> 7f939f0e58cfc42df60ab1e1e497497d5ced4f7b
         for (int i = 0; i < alunos.size(); i++) {
             temp.append(alunos.get(i).toString()).append("\n");
         }
