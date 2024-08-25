@@ -7,7 +7,7 @@ public class cliSala {
         Scanner sc = new Scanner(System.in);
 
         // Criando a lista de alunos
-        LinkedList<Aluno> lAlunos = new LinkedList<Aluno>();
+        LinkedList<Aluno> lAlunos = new LinkedList<>();
 
         // Criando uma instância da sala
         Sala sala1 = new Sala();
@@ -43,11 +43,12 @@ public class cliSala {
 
         } while (strTemp.charAt(0) != 's' && strTemp.charAt(0) != 'S');
 
-        sala1.setAlunos(lAlunos);
+        // Atualize aqui para setListAlunos
+        sala1.setListAlunos(lAlunos);
 
         System.out.println("Listando alunos");
         
-        //assim que é o chamamento do toString 
+        // Chamamento do toString
         System.out.println(sala1);
 
         sc.close(); // Fechando o Scanner para evitar vazamento de recursos
