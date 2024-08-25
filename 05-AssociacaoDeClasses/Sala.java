@@ -5,45 +5,43 @@ public class Sala {
     private String desc;
     private int qtde;
     
-    /*
-    O atributo aluno é tipo.do.objeto de uma outra classe 
-    */ 
-    private LinkedList<Aluno> alunos;
+    // O atributo listAlunos é do tipo LinkedList que armazena objetos da classe Aluno
+    private LinkedList<Aluno> listAlunos;
 
     // Construtores com sobrecarga
     public Sala() {
-        alunos = new LinkedList<>();
+        listAlunos = new LinkedList<>();
     }
 
     public Sala(String nome) {
-        alunos = new LinkedList<>();
+        listAlunos = new LinkedList<>();
         this.nome = nome;
     }
 
     public Sala(String nome, String desc) {
-        alunos = new LinkedList<>();
+        listAlunos = new LinkedList<>();
         this.nome = nome;
         this.desc = desc;
     }
 
     public Sala(String nome, String desc, int qtde) {
-        alunos = new LinkedList<>();
+        listAlunos = new LinkedList<>();
         this.nome = nome;
         this.desc = desc;
         this.qtde = qtde;
     }
 
     // Getters e Setters
-    public LinkedList<Aluno> getAlunos() {
-        return this.alunos;
+    public LinkedList<Aluno> getListAlunos() {
+        return this.listAlunos;
     }
 
-    public void setAlunos(LinkedList<Aluno> alunos) {
-        this.alunos = alunos;
+    public void setListAlunos(LinkedList<Aluno> listAlunos) {
+        this.listAlunos = listAlunos;
     }
 
-    public void addAlunos(Aluno aluno) {
-        alunos.add(aluno);
+    public void addAluno(Aluno aluno) {
+        listAlunos.add(aluno);
     }
 
     public String getNome() {
@@ -74,19 +72,12 @@ public class Sala {
     @Override
     public String toString() {
         StringBuilder temp = new StringBuilder();
-
-<<<<<<< HEAD
-        for (int i = 0; i < alunos.size(); i++) {
-            temp.append(alunos.get(i).toString()).append("\n");
-=======
-        for(int i=0; i<alunos.size();i++){
-            temp+=(this.alunos.get(i) + "\n");
->>>>>>> fc6b8570cdb986c29fbb9b9d5f71c635d91c9179
+        for (Aluno aluno : listAlunos) {
+            temp.append(aluno).append("\n");
         }
-
-        return "Nome: " + this.nome + 
-               "\nDescrição: " + this.desc + 
-               "\nQuantidade: " + this.qtde + 
+        return "Nome da sala: " + this.nome + 
+               " Descrição: " + this.desc + 
+               " Quantidade de alunos: " + this.qtde + 
                "\nAlunos:\n" + temp;
     }
 }
